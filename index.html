@@ -1,213 +1,443 @@
 <!DOCTYPE html>
+
 <html lang="id">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pasti Pintar</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #1e3c72;
-            --secondary: #2a5298;
-            --accent: #f4d03f;
-            --success: #11998e;
-            --success-light: #38ef7d;
-            --dark: #0f1419;
-        }
-        body { font-family: 'Poppins', sans-serif; color: var(--dark); }
-        .gradient-hero { 
-            background: linear-gradient(135deg, var(--success) 0%, var(--success-light) 50%, #38ef7d 100%);
-            color: var(--dark);
-        }
-        .gradient-header { 
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-        }
-        .gradient-cta { background: linear-gradient(45deg, var(--accent), #f39c12); }
-        .card-hover { 
-            border: none; 
-            transition: all 0.4s ease; 
-            background: linear-gradient(145deg, #ffffff, #f8f9ff);
-        }
-        .card-hover:hover { 
-            transform: translateY(-12px) scale(1.02); 
-            box-shadow: 0 25px 50px rgba(30,60,114,0.2) !important;
-            border-radius: 20px;
-        }
-        .btn-custom { 
-            border-radius: 50px; 
-            font-weight: 600; 
-            padding: 14px 35px; 
-            border: none;
-            transition: all 0.3s;
-            font-size: 1.1rem;
-        }
-        .btn-hero { 
-            background: linear-gradient(45deg, var(--primary), var(--secondary)); 
-            color: white;
-            box-shadow: 0 10px 30px rgba(30,60,114,0.4);
-        }
-        .btn-hero:hover { 
-            transform: translateY(-3px); 
-            box-shadow: 0 15px 40px rgba(30,60,114,0.6);
-            color: white;
-        }
-        .navbar-brand { font-weight: 800; font-size: 1.8rem; }
-        .navbar-nav .nav-link { color: white !important; font-weight: 500; margin: 0 10px; }
-        .navbar-nav .nav-link:hover { color: var(--accent) !important; }
-        .hero-title { font-weight: 800; text-shadow: 2px 2px 4px rgba(0,0,0,0.1); }
-        section { scroll-margin-top: 100px; }
-        footer { background: var(--dark); }
-    </style>
-</head>
-<body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top gradient-header py-3">
-        <div class="container">
-            <a class="navbar-brand text-white" href="#">Pasti Pintar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Beranda</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#fitur">Fitur</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#kursus">Kursus</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
-                </ul>
-                <a href="#daftar" class="btn gradient-cta text-dark fw-bold ms-lg-3 btn-custom">Daftar Gratis</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero -->
-    <section id="home" class="gradient-hero min-vh-100 d-flex align-items-center">
-        <div class="container text-center">
-            <h1 class="display-2 fw-bold hero-title mb-4">PASTI PINTAR!</h1>
-            <p class="lead fs-3 mb-5 px-3" style="max-width: 700px; margin: 0 auto;">
-                Belajar jadi menyenangkan dengan ribuan kursus interaktif, live mentoring, dan tracking progress real-time. 
-                Capai potensi maksimalmu sekarang juga!
-            </p>
-            <a href="#" class="btn btn-hero btn-lg btn-custom mb-4" onclick="daftar()">
-                <i class="bi bi-rocket-takeoff me-2"></i>Mulai Belajar Gratis
-            </a>
-            <div class="row justify-content-center g-3">
-                <div class="col-md-4"><i class="bi bi-people fs-1"></i> 50K+ Siswa</div>
-                <div class="col-md-4"><i class="bi bi-star-fill fs-1 text-warning"></i> 4.9 Rating</div>
-                <div class="col-md-4"><i class="bi bi-clock fs-1"></i> 24/7 Akses</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Fitur -->
-    <section id="fitur" class="py-5 bg-light">
-        <div class="container">
-            <div class="row justify-content-center text-center mb-5">
-                <div class="col-lg-8">
-                    <h2 class="display-4 fw-bold text-dark mb-3">Fitur Terbaik Pasti Pintar</h2>
-                    <p class="lead fs-5 text-muted">Semua yang Anda butuhkan untuk belajar efektif dalam satu platform</p>
-                </div>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="card card-hover h-100">
-                        <div class="card-body text-center p-5">
-                            <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 100px; height: 100px;">
-                                <i class="bi bi-play-circle-fill fs-1 text-primary"></i>
-                            </div>
-                            <h3 class="h4 fw-bold mb-3 text-dark">Kursus Interaktif</h3>
-                            <p class="text-muted">Video HD, quiz otomatis, dan latihan praktik yang menyenangkan.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card card-hover h-100">
-                        <div class="card-body text-center p-5">
-                            <div class="bg-success bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 100px; height: 100px;">
-                                <i class="bi bi-headset fs-1 text-success"></i>
-                            </div>
-                            <h3 class="h4 fw-bold mb-3 text-dark">Live Mentoring</h3>
-                            <p class="text-muted">Konsultasi langsung dengan expert 1-on-1 setiap minggu.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card card-hover h-100">
-                        <div class="card-body text-center p-5">
-                            <div class="bg-warning bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 100px; height: 100px;">
-                                <i class="bi bi-graph-up-arrow fs-1 text-warning"></i>
-                            </div>
-                            <h3 class="h4 fw-bold mb-3 text-dark">Progress Tracking</h3>
-                            <p class="text-muted">Lihat perkembanganmu secara real-time dengan analitik lengkap.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonial -->
-    <section id="kursus" class="py-5 bg-gradient" style="background: linear-gradient(135deg, #f8f9ff 0%, #e8f4f8 100%);">
-        <div class="container">
-            <div class="row justify-content-center text-center mb-5">
-                <div class="col-lg-8">
-                    <h2 class="display-4 fw-bold mb-4">Pengalaman Siswa Kami</h2>
-                    <p class="lead text-muted">Bergabung dengan 50.000+ siswa yang sudah sukses</p>
-                </div>
-            </div>
-            <div id="testimonialCarousel" class="carousel slide mx-auto" style="max-width: 800px;" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <blockquote class="blockquote text-center p-5 bg-white rounded-4 shadow-lg">
-                            <p class="fs-4 mb-4">"Dari nol jadi expert dalam 3 bulan! Fitur live mentoringnya luar biasa."</p>
-                            <footer class="blockquote-footer fs-5 fw-bold text-primary">Rina Putri, Mahasiswa UI<span class="text-warning ms-2">★★★★★</span></footer>
-                        </blockquote>
-                    </div>
-                    <div class="carousel-item">
-                        <blockquote class="blockquote text-center p-5 bg-white rounded-4 shadow-lg">
-                            <p class="fs-4 mb-4">"Tracking progress bikin saya termotivasi terus. Nilai TOEFL naik 200 poin!"</p>
-                            <footer class="blockquote-footer fs-5 fw-bold text-success">Bambang Wijaya, Professional<span class="text-warning ms-2">★★★★★</span></footer>
-                        </blockquote>
-                    </div>
-                    <div class="carousel-item">
-                        <blockquote class="blockquote text-center p-5 bg-white rounded-4 shadow-lg">
-                            <p class="fs-4 mb-4">"Platform paling user-friendly yang pernah saya pakai. Recommended!"</p>
-                            <footer class="blockquote-footer fs-5 fw-bold text-info">Dewi Sartika, Freelancer<span class="text-warning ms-2">★★★★★</span></footer>
-                        </blockquote>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" style="filter: invert(1);"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" style="filter: invert(1);"></span>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer id="kontak" class="text-white py-5">
-        <div class="container text-center">
-            <h3 class="fw-bold mb-4">Pasti Pintar</h3>
-            <p class="lead mb-4 opacity-75">Mulai perjalanan belajarmu hari ini. Gratis selamanya untuk basic!</p>
-            <div class="d-flex justify-content-center gap-4 mb-4 fs-3">
-                <a href="#" class="text-white hover-primary"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="text-white hover-primary"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="text-white hover-primary"><i class="bi bi-whatsapp"></i></a>
-                <a href="#" class="text-white hover-primary"><i class="bi bi-youtube"></i></a>
-            </div>
-            <small>&copy; 2026 Pasti Pintar. Hak cipta dilindungi.</small>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        function daftar() {
-            // Integrasi dengan backend Node.js/Prisma nanti
-            window.open('https://wa.me/628123456789?text=Saya%20mau%20daftar%20Pasti%20Pintar!', '_blank');
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
         }
     </script>
+    <title>Pasti Pintar - Kursus Online Terbaik</title>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+    <!-- Top Navigation Bar -->
+    <header
+        class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="size-10 bg-primary rounded-lg flex items-center justify-center text-white">
+                    <span class="material-symbols-outlined text-2xl">school</span>
+                </div>
+                <h1 class="text-xl font-bold tracking-tight">Pasti Pintar</h1>
+            </div>
+            <nav class="hidden md:flex items-center gap-8">
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#program">Program</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#testimoni">Testimoni</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#faq">FAQ</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#contact">Contact Us</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <button class="hidden sm:block text-sm font-semibold px-4 py-2 hover:text-primary">Bantuan</button>
+                <button
+                    class="bg-primary text-white text-sm font-bold px-6 py-2.5 rounded-xl hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
+                    Login
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden pt-16 pb-24 lg:pt-24 lg:pb-32">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="max-w-2xl">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider mb-6">
+                        <span class="material-symbols-outlined text-sm">verified_user</span>
+                        Terakreditasi A+ Seluruh Indonesia
+                    </div>
+                    <h1 class="text-5xl lg:text-7xl font-black leading-[1.1] mb-6 tracking-tight">
+                        Kursus Online <span class="text-primary">Matematika</span> &amp; Bahasa Inggris
+                    </h1>
+                    <p class="text-lg text-slate-600 dark:text-slate-400 mb-10 leading-relaxed">
+                        Tingkatkan kemampuan akademis anak Anda dengan metode belajar yang seru, interaktif, dan dipandu
+                        oleh pengajar berpengalaman berskala internasional.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button
+                            class="bg-primary text-white text-lg font-bold px-8 py-4 rounded-xl hover:bg-primary/90 transition-all shadow-xl shadow-primary/30 flex items-center justify-center gap-2">
+                            Konsultasi Sekarang
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </button>
+                        <button
+                            class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-lg font-bold px-8 py-4 rounded-xl hover:bg-slate-50 transition-all flex items-center justify-center gap-2">
+                            Lihat Kurikulum
+                        </button>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div
+                        class="absolute -inset-4 bg-primary/5 rounded-3xl blur-3xl group-hover:bg-primary/10 transition-colors">
+                    </div>
+                    <div class="relative w-full aspect-square rounded-3xl bg-slate-200 dark:bg-slate-800 overflow-hidden shadow-2xl"
+                        data-alt="Modern student illustration studying with laptop and books"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDwTg2ZBnRre_dhIkomGvAr56pPxcOIJ3-3H_7fsN7P-qCMf6mzNcopAH6Pivw5hWxRXOEh_J635ff-eY0f9M36Kg-Y9ZFYfHrHDH2tXBnMxW7X0clavN4DEbfLGGybzUkE6cNqme2IKG5Mzhsw9ew6oErtwm7Abm5ZWkgMw6GczqxlLRll8fa1wkhUfp9t9C0g9v3DBvJnhugv8D7hR4jcwnOsRbmnnzGDi5u9Xh3-5uNwznWhOSEXue9MsDpnW0WbMWfQHAJLh78t"); background-size: cover; background-position: center;'>
+                    </div>
+                    <!-- Floating Stats Card -->
+                    <div
+                        class="absolute -bottom-6 -left-6 bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-700 flex items-center gap-4">
+                        <div class="size-12 rounded-full bg-green-100 flex items-center justify-center text-green-600">
+                            <span class="material-symbols-outlined text-3xl">trending_up</span>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold">15,000+</p>
+                            <p class="text-xs text-slate-500 uppercase font-bold tracking-widest">Siswa Aktif</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Program Kursus Section -->
+    <section class="py-24 bg-slate-50 dark:bg-slate-900/50" id="program">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10 text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4 tracking-tight">Pilihan Program Kursus</h2>
+            <p class="text-slate-600 dark:text-slate-400 max-w-xl mx-auto">Kurikulum standar internasional yang
+                disesuaikan dengan kebutuhan pendidikan di Indonesia.</p>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-10 grid md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div
+                class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700 group">
+                <div class="h-56 bg-cover bg-center" data-alt="Mathematics concept with colorful formulas"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuANj3fsf6s-49jueqHLha7rsj0yPBOU3e2YRAl2Qo1aPtwioE75bUe6cenKJvKUDaFHyY1B5K6QJRX6oTGE-JHsYDDZRJr3FkInF8xzAZ56eKsTJKhoJhMVTPfC6ZxvtboY8afNICXMRQ0vMnNNLpN-CoX6zCmz9XIW7YJEm8a3C8AF_MwtfRVHCS-fPneWgwXI0ogsSezv8OfnM6_ZUrUWbuBJtprlM81friwuQhQRV5tIpDRDFer-iZcMpozbHxgJOD3GrSIVY3JM");'>
+                </div>
+                <div class="p-8">
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Matematika Terapan
+                    </h3>
+                    <p class="text-slate-600 dark:text-slate-400 mb-6 text-sm leading-relaxed">Fokus pada pengembangan
+                        logika, kemampuan pemecahan masalah, dan pemahaman konsep mendalam untuk segala usia.</p>
+                    <button
+                        class="w-full py-3 px-4 border-2 border-primary/20 text-primary font-bold rounded-xl hover:bg-primary hover:text-white transition-all">Lihat
+                        Detail</button>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div
+                class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700 group scale-105 border-primary ring-1 ring-primary/20">
+                <div class="h-56 bg-cover bg-center" data-alt="English language learning book and coffee"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDCkMBBOvYqVkWNBPWg8M7M4U2qMG39Uy-h3rr2_-_KeDR3XgLZyLAIRx5YUCIYMWNfAaExJ8ws5L6qOeB7YIE4b5SKuax5rl_KB6leWk7k2SBEQcXCPapP_UPUiaCeHfsLa3YOLP7fHRTZEV2vEXPEPni8_WeUq8NuUsxbhT_mdDg4pJVpHqf8ceULKWvVBJlF_9sB-lIufBE3Sr365lyw2lRN5NNmFdiuhc8qXiZvklWzUXhdqOA8kR_JWisPYMTlDry7DgzQWAs8");'>
+                </div>
+                <div class="p-8">
+                    <div class="bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded absolute top-4 right-4">
+                        POPULER</div>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Bahasa Inggris
+                        Komunikatif</h3>
+                    <p class="text-slate-600 dark:text-slate-400 mb-6 text-sm leading-relaxed">Penguasaan tata bahasa,
+                        kosa kata, dan percakapan aktif dengan metode Native speaker immersion.</p>
+                    <button
+                        class="w-full py-3 px-4 bg-primary text-white font-bold rounded-xl hover:bg-primary/90 transition-all">Daftar
+                        Sekarang</button>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div
+                class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700 group">
+                <div class="h-56 bg-cover bg-center" data-alt="Children studying together happily"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDBOxJX6RqV9IuDoAZtnodwEDDJy14KtsXR4zY1fXsQ9v9gyG_vd829KcBkGPJKQDBQrG10X0iA5osdhrlz0ujgVDsC8GQZ2--1l8m5k7fbP80l1jkZUSTdZ3QlPtR6dXiSP1x7dYwAVj8hOGkjPFQwn53m-IaHT8CIJxzkYp0xNOSFKVMA34ZidXOGV1rCaA_zpnEvDEbYUPcgdcmyEZ7wIiXbU1mThTZA9QAvELSfZxkBeDjR3YGaE0dZl2rOCU7E9o1INzy8wLhA");'>
+                </div>
+                <div class="p-8">
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Bundle Hemat Juara
+                    </h3>
+                    <p class="text-slate-600 dark:text-slate-400 mb-6 text-sm leading-relaxed">Paket lengkap Matematika
+                        &amp; Bahasa Inggris dengan harga lebih terjangkau untuk hasil akademis maksimal.</p>
+                    <button
+                        class="w-full py-3 px-4 border-2 border-primary/20 text-primary font-bold rounded-xl hover:bg-primary hover:text-white transition-all">Pilih
+                        Paket</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Kenapa Memilih Kami? Section -->
+    <section class="py-24">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Kenapa Memilih Pasti Pintar?</h2>
+                <p class="text-slate-600 dark:text-slate-400">Kami memberikan standar pendidikan yang tidak akan Anda
+                    temukan di tempat lain.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Benefit Cards -->
+                <div
+                    class="p-6 bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 hover:border-primary/50 transition-all">
+                    <div class="size-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-4">
+                        <span class="material-symbols-outlined">person_pin</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Mentor Berpengalaman</h4>
+                    <p class="text-sm text-slate-500">Diajar langsung oleh lulusan universitas top dunia.</p>
+                </div>
+                <div
+                    class="p-6 bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 hover:border-primary/50 transition-all">
+                    <div class="size-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-4">
+                        <span class="material-symbols-outlined">update</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Jadwal Fleksibel</h4>
+                    <p class="text-sm text-slate-500">Atur waktu belajar sesuai dengan kenyamanan anak Anda.</p>
+                </div>
+                <div
+                    class="p-6 bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 hover:border-primary/50 transition-all">
+                    <div class="size-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-4">
+                        <span class="material-symbols-outlined">auto_stories</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Materi Interaktif</h4>
+                    <p class="text-sm text-slate-500">Kurikulum yang tidak membosankan dengan elemen gamifikasi.</p>
+                </div>
+                <div
+                    class="p-6 bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 hover:border-primary/50 transition-all">
+                    <div class="size-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-4">
+                        <span class="material-symbols-outlined">analytics</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Laporan Progress</h4>
+                    <p class="text-sm text-slate-500">Pantau perkembangan anak secara real-time setiap minggu.</p>
+                </div>
+                <div
+                    class="p-6 bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 hover:border-primary/50 transition-all">
+                    <div class="size-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-4">
+                        <span class="material-symbols-outlined">groups</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Kelas Kecil</h4>
+                    <p class="text-sm text-slate-500">Maksimal 5 siswa per kelas untuk perhatian yang intensif.</p>
+                </div>
+                <div
+                    class="p-6 bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 hover:border-primary/50 transition-all">
+                    <div class="size-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-4">
+                        <span class="material-symbols-outlined">payments</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Harga Kompetitif</h4>
+                    <p class="text-sm text-slate-500">Kualitas premium dengan biaya yang sangat terjangkau.</p>
+                </div>
+                <div
+                    class="p-6 bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 hover:border-primary/50 transition-all">
+                    <div class="size-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-4">
+                        <span class="material-symbols-outlined">workspace_premium</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Sertifikat Resmi</h4>
+                    <p class="text-sm text-slate-500">Mendapatkan sertifikat setiap menyelesaikan level tertentu.</p>
+                </div>
+                <div
+                    class="p-6 bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 hover:border-primary/50 transition-all">
+                    <div class="size-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-4">
+                        <span class="material-symbols-outlined">support_agent</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Dukungan 24/7</h4>
+                    <p class="text-sm text-slate-500">Layanan bantuan admin yang siap membantu kapan saja.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonial Section -->
+    <section class="py-24 bg-primary text-white overflow-hidden relative" id="testimoni">
+        <div class="absolute top-0 right-0 p-20 opacity-10">
+            <span class="material-symbols-outlined text-[300px]">format_quote</span>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
+            <h2 class="text-3xl font-bold mb-12 text-center">Apa Kata Mereka?</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20">
+                    <div class="flex gap-1 text-yellow-400 mb-4">
+                        <span class="material-symbols-outlined fill-1">star</span>
+                        <span class="material-symbols-outlined fill-1">star</span>
+                        <span class="material-symbols-outlined fill-1">star</span>
+                        <span class="material-symbols-outlined fill-1">star</span>
+                        <span class="material-symbols-outlined fill-1">star</span>
+                    </div>
+                    <p class="italic mb-6 text-white/90">"Anak saya jadi lebih bersemangat belajar Matematika semenjak
+                        gabung di Pasti Pintar. Tutornya sabar banget!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="size-12 rounded-full bg-slate-200 overflow-hidden"
+                            data-alt="Portrait of a happy mother"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDFlBw5VNtExvLN01vfSSQymgHdL-M04ztUY6v8JkNuk_icpTd97xEjKbjp0rvuiS49SMVPg8ajB9ibCjWTkDxRyk8d8w471sX0B-PoifPc1GXIZiDMx7VHikF7VR5txxYgUGvFkbtf8grf6pXw_fJakkNfY4YMLXGavdS_JPbxi-luSKfc-MQhzsRhS1J19i86EDzn2uCJ3gVARxIiS3yLP2mmNo5Y2tsWd5TBtPsoCptyTMNn0OfmW7SH8d7LyRqtfa1z3h5xwr-I"); background-size: cover;'>
+                        </div>
+                        <div>
+                            <p class="font-bold">Ibu Maya</p>
+                            <p class="text-xs text-white/70">Orang Tua Siswa SD</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20">
+                    <div class="flex gap-1 text-yellow-400 mb-4">
+                        <span class="material-symbols-outlined fill-1">star</span>
+                        <span class="material-symbols-outlined fill-1">star</span>
+                        <span class="material-symbols-outlined fill-1">star</span>
+                        <span class="material-symbols-outlined fill-1">star</span>
+                        <span class="material-symbols-outlined fill-1">star</span>
+                    </div>
+                    <p class="italic mb-6 text-white/90">"Materi Bahasa Inggrisnya seru, banyak games-nya jadi gak bikin
+                        ngantuk. Nilai saya di sekolah langsung naik drastis."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="size-12 rounded-full bg-slate-200 overflow-hidden"
+                            data-alt="Portrait of a young student boy"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA04bLBDsXS3z6LjQZjn1kUp5WWfskrxAK4HVl38QziCEiFeDCYh-pddhaA34VHcruq2qUnMs-BBVL-H7i8MpEQ2j_3E8n5jsu_JUMUHZ5HZmncThjhsNfJKgOhl_b0uk6lOh7lu6XNx4thomKP0XiB_GpPOPb3t8GfFb_fR_DlLJeHLWuxwphspY-4zdEbJLHX9LZmWyw_i9PdaueAEC41Q9ID6DT1Jti9u7PIwDPeZHo7NiXsAzGZOJJNMHnEMpeHa-QwzPJ9d8t4"); background-size: cover;'>
+                        </div>
+                        <div>
+                            <p class="font-bold">Kevin</p>
+                            <p class="text-xs text-white/70">Siswa SMP Kelas 8</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20">
+                    <div class="flex gap-1 text-yellow-400 mb-4">
+                        <span class="material-symbols-outlined fill-1">star</span>
+                        <span class="material-symbols-outlined fill-1">star</span>
+                        <span class="material-symbols-outlined fill-1">star</span>
+                        <span class="material-symbols-outlined fill-1">star</span>
+                        <span class="material-symbols-outlined fill-1">star</span>
+                    </div>
+                    <p class="italic mb-6 text-white/90">"Pilihan terbaik untuk kursus online. Sistem laporannya
+                        transparan banget, jadi saya tahu anak saya sudah belajar apa aja."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="size-12 rounded-full bg-slate-200 overflow-hidden"
+                            data-alt="Portrait of a smiling father"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAeaYTHH-yYKl932Z1-gjEnzkNzXKk6QnUULuFO8x997fpwgd0x1VcnAhWSy8dvf0TEByCCfDpDzhL-8NGvu2ogI_sdUjKyofFoSQfWSEBqNPUy2ZRBRPJUVPuWrI5k4Ytt5nNXix2yTjBeLvRFcFSeX4YA5d7wRVDzXQaL4gJ7-7kiIM3Z8j5SD6uv6a90XkubZoj_b9K9oNyQD0m4MmMECPywgCKq1_vsNfmHdIiInL1j41sKhIM7jrsF6Ia78splW6_4duv2mPph"); background-size: cover;'>
+                        </div>
+                        <div>
+                            <p class="font-bold">Bapak Hendra</p>
+                            <p class="text-xs text-white/70">Orang Tua Siswa SMA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FAQ Section -->
+    <section class="py-24 bg-white dark:bg-background-dark" id="faq">
+        <div class="max-w-4xl mx-auto px-6 lg:px-10">
+            <h2 class="text-3xl font-bold mb-12 text-center">Pertanyaan Umum (FAQ)</h2>
+            <div class="space-y-4">
+                <div class="border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden">
+                    <button
+                        class="w-full flex items-center justify-between p-6 text-left hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                        <span class="font-semibold">Berapa lama durasi setiap kelas?</span>
+                        <span class="material-symbols-outlined">add</span>
+                    </button>
+                </div>
+                <div
+                    class="border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden bg-slate-50 dark:bg-slate-800/50">
+                    <button class="w-full flex items-center justify-between p-6 text-left">
+                        <span class="font-semibold text-primary">Apakah ada kelas percobaan gratis?</span>
+                        <span class="material-symbols-outlined rotate-45">add</span>
+                    </button>
+                    <div class="px-6 pb-6 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        Ya! Kami menyediakan satu kali kelas percobaan gratis selama 30 menit untuk setiap calon siswa
+                        baru agar bisa merasakan metode pengajaran kami sebelum mendaftar.
+                    </div>
+                </div>
+                <div class="border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden">
+                    <button
+                        class="w-full flex items-center justify-between p-6 text-left hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                        <span class="font-semibold">Platform apa yang digunakan untuk kelas online?</span>
+                        <span class="material-symbols-outlined">add</span>
+                    </button>
+                </div>
+                <div class="border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden">
+                    <button
+                        class="w-full flex items-center justify-between p-6 text-left hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                        <span class="font-semibold">Bagaimana jika saya berhalangan hadir?</span>
+                        <span class="material-symbols-outlined">add</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-20" id="contact">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div>
+                    <div class="flex items-center gap-3 mb-6 text-white">
+                        <div class="size-8 bg-primary rounded-lg flex items-center justify-center">
+                            <span class="material-symbols-outlined text-xl">school</span>
+                        </div>
+                        <h2 class="text-xl font-bold">Pasti Pintar</h2>
+                    </div>
+                    <p class="text-sm leading-relaxed mb-6">Mencetak generasi cerdas dan berkarakter melalui pendidikan
+                        online yang berkualitas dan terjangkau bagi seluruh anak Indonesia.</p>
+                    <div class="flex gap-4">
+                        <a class="size-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+                            href="#">
+                            <span class="material-symbols-outlined">public</span>
+                        </a>
+                        <a class="size-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+                            href="#">
+                            <span class="material-symbols-outlined">share</span>
+                        </a>
+                        <a class="size-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+                            href="#">
+                            <span class="material-symbols-outlined">alternate_email</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-6">Program Kami</h3>
+                    <ul class="space-y-4 text-sm">
+                        <li><a class="hover:text-primary transition-colors" href="#">Matematika SD-SMA</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">English for Kids</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Business English</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Persiapan Ujian</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-6">Tautan Cepat</h3>
+                    <ul class="space-y-4 text-sm">
+                        <li><a class="hover:text-primary transition-colors" href="#">Tentang Kami</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Cara Mendaftar</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Blog &amp; Tips Belajar</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Syarat &amp; Ketentuan</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-6">Hubungi Kami</h3>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">mail</span>
+                            halo@pastipintar.id
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">call</span>
+                            +62 812 3456 7890
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-primary">location_on</span>
+                            Jl. Pendidikan No. 123, Jakarta Selatan, 12345
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+                <p>© 2024 Pasti Pintar. All rights reserved.</p>
+                <div class="flex gap-8">
+                    <a class="hover:text-white" href="#">Privacy Policy</a>
+                    <a class="hover:text-white" href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
