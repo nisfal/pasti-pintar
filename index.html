@@ -31,6 +31,8 @@
             },
         }
     </script>
+    <link rel="icon"
+        href="https://lh3.googleusercontent.com/aida/ADBb0ujuy13aL9VHvfdOC-1jhBJtSBN75-HlNLPmXMAtKtWlVuQLWf2NO8mg1XiUdLBroxA0WlXyLdaHB0wx9zujvAXJuc4ZlAbwTPQ2iO9hS91uwj5TTiAFwoAQY8VnxP6jx1gOJDZRTTMsyj_8ec5bSOJK8KQPiSYQ00gEIw_MtNxLDqkP9ru6o-3wxFPiB8sW2X34Jpfd13c-oCZ77fsetVuswY1nuOeMVYCWmQRVbJlC6_bhzi8duMUlyOJapF_DbG0CZsBdM_PkOtE" />
     <title>Pasti Pintar - Kursus Online Terbaik</title>
 </head>
 
@@ -40,10 +42,10 @@
         class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <div class="size-10 bg-primary rounded-lg flex items-center justify-center text-white">
-                    <span class="material-symbols-outlined text-2xl">school</span>
-                </div>
-                <h1 class="text-xl font-bold tracking-tight">Pasti Pintar</h1>
+                <img alt="Pasti Pintar Logo" class="w-16 h-16 sm:w-20 sm:h-20 object-contain rounded-lg"
+                    src="https://lh3.googleusercontent.com/aida/ADBb0ujuy13aL9VHvfdOC-1jhBJtSBN75-HlNLPmXMAtKtWlVuQLWf2NO8mg1XiUdLBroxA0WlXyLdaHB0wx9zujvAXJuc4ZlAbwTPQ2iO9hS91uwj5TTiAFwoAQY8VnxP6jx1gOJDZRTTMsyj_8ec5bSOJK8KQPiSYQ00gEIw_MtNxLDqkP9ru6o-3wxFPiB8sW2X34Jpfd13c-oCZ77fsetVuswY1nuOeMVYCWmQRVbJlC6_bhzi8duMUlyOJapF_DbG0CZsBdM_PkOtE"
+                    style="" />
+
             </div>
             <nav class="hidden md:flex items-center gap-8">
                 <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
@@ -53,11 +55,14 @@
                 <a class="text-sm font-medium hover:text-primary transition-colors" href="#contact">Contact Us</a>
             </nav>
             <div class="flex items-center gap-4">
-                <button class="hidden sm:block text-sm font-semibold px-4 py-2 hover:text-primary">Bantuan</button>
-                <button
+                <!-- <a href="#daftar" class="hidden sm:inline-flex items-center justify-center w-12 h-12 rounded-full bg-green-600 hover:bg-green-700 transition-colors shadow-lg shadow-green-500/20"
+                    aria-label="Daftar Sekarang">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-6 h-6" />
+                </a> -->
+                <a href="#daftar"
                     class="bg-primary text-white text-sm font-bold px-6 py-2.5 rounded-xl hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
-                    Login
-                </button>
+                    Daftar
+                </a>
             </div>
         </div>
     </header>
@@ -79,7 +84,7 @@
                         oleh pengajar berpengalaman berskala internasional.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <button
+                        <button onclick="window.open('https://wa.me/6282211530864', '_blank', 'noopener,noreferrer')"
                             class="bg-primary text-white text-lg font-bold px-8 py-4 rounded-xl hover:bg-primary/90 transition-all shadow-xl shadow-primary/30 flex items-center justify-center gap-2">
                             Konsultasi Sekarang
                             <span class="material-symbols-outlined">arrow_forward</span>
@@ -113,6 +118,55 @@
             </div>
         </div>
     </section>
+    <!-- Daftar Section -->
+    <section class="py-24 bg-white dark:bg-slate-900" id="daftar">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+            <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider mb-6">
+                        <span class="material-symbols-outlined text-sm">how_to_reg</span>
+                        Registrasi Online
+                    </div>
+                    <h2 class="text-4xl font-bold mb-4">Daftar Sekarang untuk Kelas Terbaik</h2>
+                    <p class="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">Isi formulir di bawah ini dan data akan dikirim langsung.</p>
+                </div>
+                <form id="registration-form" class="space-y-4 bg-slate-50 dark:bg-slate-800 p-8 rounded-3xl shadow-xl border border-slate-200 dark:border-slate-700">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <label class="block">
+                            <span class="text-sm font-medium text-slate-700 dark:text-slate-200">Nama Lengkap</span>
+                            <input type="text" name="nama" required class="mt-2 w-full rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-3 text-slate-900 dark:text-slate-100 focus:border-primary focus:outline-none" />
+                        </label>
+                        <label class="block">
+                            <span class="text-sm font-medium text-slate-700 dark:text-slate-200">Email</span>
+                            <input type="email" name="email" required class="mt-2 w-full rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-3 text-slate-900 dark:text-slate-100 focus:border-primary focus:outline-none" />
+                        </label>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <label class="block">
+                            <span class="text-sm font-medium text-slate-700 dark:text-slate-200">Nomor WhatsApp</span>
+                            <input type="tel" name="whatsapp" required placeholder="0822-1153-0864" class="mt-2 w-full rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-3 text-slate-900 dark:text-slate-100 focus:border-primary focus:outline-none" />
+                        </label>
+                        <label class="block">
+                            <span class="text-sm font-medium text-slate-700 dark:text-slate-200">Program Pilihan</span>
+                            <select name="program" class="mt-2 w-full rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-3 text-slate-900 dark:text-slate-100 focus:border-primary focus:outline-none">
+                                <option value="Matematika Terapan">Matematika Terapan</option>
+                                <option value="Bahasa Inggris Komunikatif">Bahasa Inggris Komunikatif</option>
+                                <option value="Bundle Hemat Juara">Bundle Hemat Juara</option>
+                            </select>
+                        </label>
+                    </div>
+                    <label class="block">
+                        <span class="text-sm font-medium text-slate-700 dark:text-slate-200">Pesan Tambahan</span>
+                        <textarea name="pesan" rows="4" class="mt-2 w-full rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-3 text-slate-900 dark:text-slate-100 focus:border-primary focus:outline-none"></textarea>
+                    </label>
+                    <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <button type="submit" class="bg-primary text-white text-lg font-bold px-8 py-4 rounded-xl hover:bg-primary/90 transition-all shadow-xl shadow-primary/30">Kirim Pendaftaran</button>
+                        <p id="form-status" class="text-sm text-slate-500 dark:text-slate-400"></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
     <!-- Program Kursus Section -->
     <section class="py-24 bg-slate-50 dark:bg-slate-900/50" id="program">
         <div class="max-w-7xl mx-auto px-6 lg:px-10 text-center mb-16">
@@ -133,8 +187,8 @@
                     <p class="text-slate-600 dark:text-slate-400 mb-6 text-sm leading-relaxed">Fokus pada pengembangan
                         logika, kemampuan pemecahan masalah, dan pemahaman konsep mendalam untuk segala usia.</p>
                     <button
-                        class="w-full py-3 px-4 border-2 border-primary/20 text-primary font-bold rounded-xl hover:bg-primary hover:text-white transition-all">Lihat
-                        Detail</button>
+                        class="w-full py-3 px-4 border-2 border-primary/20 text-primary font-bold rounded-xl hover:bg-primary hover:text-white transition-all">Pilih
+                        Paket</button>
                 </div>
             </div>
             <!-- Card 2 -->
@@ -151,8 +205,8 @@
                     <p class="text-slate-600 dark:text-slate-400 mb-6 text-sm leading-relaxed">Penguasaan tata bahasa,
                         kosa kata, dan percakapan aktif dengan metode Native speaker immersion.</p>
                     <button
-                        class="w-full py-3 px-4 bg-primary text-white font-bold rounded-xl hover:bg-primary/90 transition-all">Daftar
-                        Sekarang</button>
+                        class="w-full py-3 px-4 bg-primary text-white font-bold rounded-xl hover:bg-primary/90 transition-all">Pilih
+                        Paket</button>
                 </div>
             </div>
             <!-- Card 3 -->
@@ -271,7 +325,7 @@
                     <div class="flex items-center gap-4">
                         <div class="size-12 rounded-full bg-slate-200 overflow-hidden"
                             data-alt="Portrait of a happy mother"
-                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDFlBw5VNtExvLN01vfSSQymgHdL-M04ztUY6v8JkNuk_icpTd97xEjKbjp0rvuiS49SMVPg8ajB9ibCjWTkDxRyk8d8w471sX0B-PoifPc1GXIZiDMx7VHikF7VR5txxYgUGvFkbtf8grf6pXw_fJakkNfY4YMLXGavdS_JPbxi-luSKfc-MQhzsRhS1J19i86EDzn2uCJ3gVARxIiS3yLP2mmNo5Y2tsWd5TBtPsoCptyTMNn0OfmW7SH8d7LyRqtfa1z3h5xwr-I"); background-size: cover;'>
+                            style='background-image: url("https://people.com/thmb/PQOvnHZB_G3SRvi3dfgIlw3Mlgc=/4000x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(511x0:513x2)/charlotte-triggs-headshot-7ef4504afc244ec99096e5fc0c1a3b63.jpg"); background-size: cover;'>
                         </div>
                         <div>
                             <p class="font-bold">Ibu Maya</p>
@@ -292,7 +346,7 @@
                     <div class="flex items-center gap-4">
                         <div class="size-12 rounded-full bg-slate-200 overflow-hidden"
                             data-alt="Portrait of a young student boy"
-                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA04bLBDsXS3z6LjQZjn1kUp5WWfskrxAK4HVl38QziCEiFeDCYh-pddhaA34VHcruq2qUnMs-BBVL-H7i8MpEQ2j_3E8n5jsu_JUMUHZ5HZmncThjhsNfJKgOhl_b0uk6lOh7lu6XNx4thomKP0XiB_GpPOPb3t8GfFb_fR_DlLJeHLWuxwphspY-4zdEbJLHX9LZmWyw_i9PdaueAEC41Q9ID6DT1Jti9u7PIwDPeZHo7NiXsAzGZOJJNMHnEMpeHa-QwzPJ9d8t4"); background-size: cover;'>
+                            style='background-image: url("data:image/jpeg;base64,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"); background-size: cover;'>
                         </div>
                         <div>
                             <p class="font-bold">Kevin</p>
@@ -313,7 +367,7 @@
                     <div class="flex items-center gap-4">
                         <div class="size-12 rounded-full bg-slate-200 overflow-hidden"
                             data-alt="Portrait of a smiling father"
-                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAeaYTHH-yYKl932Z1-gjEnzkNzXKk6QnUULuFO8x997fpwgd0x1VcnAhWSy8dvf0TEByCCfDpDzhL-8NGvu2ogI_sdUjKyofFoSQfWSEBqNPUy2ZRBRPJUVPuWrI5k4Ytt5nNXix2yTjBeLvRFcFSeX4YA5d7wRVDzXQaL4gJ7-7kiIM3Z8j5SD6uv6a90XkubZoj_b9K9oNyQD0m4MmMECPywgCKq1_vsNfmHdIiInL1j41sKhIM7jrsF6Ia78splW6_4duv2mPph"); background-size: cover;'>
+                            style='background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl7IedZv3EKjHjsE1LVi0e-E8kn2W_wKhrfqralgUgnnQoLgW0wRXt3EY&s"); background-size: cover;'>
                         </div>
                         <div>
                             <p class="font-bold">Bapak Hendra</p>
@@ -438,6 +492,36 @@
             </div>
         </div>
     </footer>
+    <a href="https://wa.me/6282211530864" target="_blank" rel="noreferrer noopener"
+        class="fixed right-6 bottom-6 z-50 inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-600 text-white shadow-2xl shadow-green-500/20 hover:bg-green-700 transition-all"
+        aria-label="WhatsApp Bantuan">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-8 h-8" />
+    </a>
+    <script>
+        const form = document.getElementById('registration-form');
+        const formStatus = document.getElementById('form-status');
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbziDQ4KW9_XNTLk9siDo5O1xiD92MN4senGNwI5RNQReEa7K77emiBQLMVgjmUUpEOHYg/exec';
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            formStatus.textContent = 'Mengirim data...';
+
+            fetch(scriptURL, {
+                method: 'POST',
+                mode: 'no-cors',
+                body: new FormData(form),
+            })
+            .then(() => {
+                // response opaque karena cross-origin ke Apps Script
+                formStatus.textContent = 'Terima kasih! Data Anda sudah dikirim.';
+                form.reset();
+            })
+            .catch((error) => {
+                console.error(error);
+                formStatus.textContent = 'Terjadi kesalahan. Silakan coba lagi.';
+            });
+        });
+    </script>
 </body>
 
 </html>
